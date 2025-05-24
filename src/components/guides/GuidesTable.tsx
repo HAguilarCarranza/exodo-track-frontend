@@ -205,7 +205,7 @@ const GuidesTable: React.FC = () => {
     {
       title: 'Acción',
       key: 'action',
-      render: (_, record) => (
+      render: () => (
         <Space size="small">
           <Button type="link" size="small">Config</Button>
           <Button type="link" size="small">Ver</Button>
@@ -218,7 +218,7 @@ const GuidesTable: React.FC = () => {
       dataIndex: 'estado',
       render: (estado: string) => {
         let color = 'green';
-        let dot = '•';
+        const dot = '•';
         
         if (estado === 'pendiente') {
           color = 'gray';
